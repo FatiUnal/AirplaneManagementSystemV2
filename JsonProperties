@@ -1,0 +1,18 @@
+ADMİN
+
+postmapping()
+http://localhost:8080/admin
+createAdmin
+{
+    "firstName":"Nilay",
+    "lastName" : "ünal",
+    "email" : "fatih@gmail.com",
+    "password":"1234"
+}
+
+getmapping(/{mail})
+http://localhost:8080/admin/{mail}
+getByEmail
+
+
+
