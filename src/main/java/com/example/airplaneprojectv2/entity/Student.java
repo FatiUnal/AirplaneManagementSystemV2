@@ -27,7 +27,6 @@ public class Student {
         this.discount = 20;
         this.role = "6";
     }
-
     public Student(String firstName, String lastName, String email, String password) {
         this.firstName = firstName;
         this.lastName = lastName;

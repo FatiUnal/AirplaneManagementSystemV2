@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "admins")
 
-public class Admin {
+public class Admin{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,7 +24,6 @@ public class Admin {
         this.password = password;
         this.role = "1";
     }
-
     public Admin(String firstName, String lastName, String email, String password) {
         this.firstName = firstName;
         this.lastName = lastName;

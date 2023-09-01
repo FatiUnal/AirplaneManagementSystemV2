@@ -1,65 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="app.css">
-    <title>login</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+  <!-- Optional: Bootstrap Icons (if needed) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
 </head>
+
 <body>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
 
-<div class="container login-container">
-            <div class="row">
-                <div class="col-md-6 login-form-1">
-                    <h3>Login</h3>
-                    <form>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Email *" value="" id="lemail"/>
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Your Password *" value="" id="lpassword"/>
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" class="btnSubmit" value="Login" onclick="login()"/>
-                        </div>
-                        <div class="form-group">
-                            <a href="#" class="ForgetPwd">Forget Password?</a>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-md-6 login-form-2">
-                    <h3>Register</h3>
-                    <form>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="First Name *" value="" id="RfirstName" />
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Last Name *" value="" id="RlastName"/>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Email *" value="" id="Remail"/>
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Your Password *" value="" id="Rpassword"/>
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" class="btnSubmit" value="Login" onclick="register()" />
-                        </div>
-                        <div class="form-group">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h2 class="text-center text-dark mt-5">Login Form</h2>
+        <div class="text-center mb-5 text-dark">Made with bootstrap</div>
+        <div class="card my-5">
 
-                            <a href="#" class="ForgetPwd" value="Login">Forget Password?</a>
-                        </div>
-                    </form>
-                </div>
+          <form class="card-body cardbody-color p-lg-5">
+
+            <div class="text-center">
+              <img src="https://cdn.pixabay.com/photo/2016/03/31/19/56/avatar-1295397__340.png"
+                class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3" width="200px" alt="profile">
             </div>
+
+            <div class="mb-3">
+              <input type="email" class="form-control" id="lemail" aria-describedby="emailHelp" placeholder="e-mail">
+            </div>
+            <div class="mb-3">
+              <input type="password" class="form-control" id="lpassword" placeholder="password">
+            </div>
+            <select class="form-select" aria-label="Default select example" id="lselect">
+              <option selected value="1">Open this select menu</option>
+              <option value="2">Adult</option>
+              <option value="3">Baby</option>
+              <option value="4">Disabled</option>
+              <option value="5">Foreigner</option>
+              <option value="6">Student</option>
+            </select>
+            <div class="text-center"><button type="submit" class="btn btn-color px-5 mb-5 w-100"
+                onclick="login(event)">Login</button></div>
+            <div id="emailHelp" class="form-text text-center mb-5 text-dark">NotRegistered? <a href="#"
+                class="text-dark fw-bold"> Create an Account</a>
+            </div>
+          </form>
         </div>
 
-    <script src="login.js"></script>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="login.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
-</html>
+
+</html>l
