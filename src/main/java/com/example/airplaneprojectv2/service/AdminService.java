@@ -7,6 +7,8 @@ import com.example.airplaneprojectv2.entity.Admin;
 import com.example.airplaneprojectv2.repository.AdminRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class AdminService implements IAdminService{
 
@@ -27,5 +29,10 @@ public class AdminService implements IAdminService{
     @Override
     public Admin getAdminByEmail(String mail) {
         return adminRepository.getByEmail(mail);
+    }
+
+    @Override
+    public List<Admin> getList() {
+        return adminRepository.findAll();
     }
 }

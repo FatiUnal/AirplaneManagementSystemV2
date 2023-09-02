@@ -16,6 +16,91 @@ getByEmail
 
 
 
+
+---------------------------------------------------------------
+
+ADULT
+http://localhost:8080/adult
+createAdult
+postmapping()
+{
+    "firstName":"Nilay",
+    "lastName" : "ünal",
+    "email" : "fatih@gmail.com",
+    "password":"1234"
+}
+
+
+
+
+
+
+
+
+---------------------------------------------------------------
+
+BABY
+http://localhost:8080/baby
+createBaby
+postmapping()
+{
+    "firstName":"Nilay",
+    "lastName" : "ünal",
+    "email" : "fatih@gmail.com",
+    "password":"1234"
+}
+
+
+
+
+
+
+
+
+---------------------------------------------------------------
+
+Disabled
+http://localhost:8080/disabled
+createDisabled
+postmapping()
+{
+    "firstName":"Nilay",
+    "lastName" : "ünal",
+    "email" : "fatih@gmail.com",
+    "password":"1234"
+}
+
+---------------------------------------------------------------
+
+Foreigner
+http://localhost:8080/foreigner
+createDisabled
+postmapping()
+{
+    "firstName":"Nilay",
+    "lastName" : "ünal",
+    "email" : "fatih@gmail.com",
+    "password":"1234"
+}
+
+
+
+
+
+---------------------------------------------------------------
+Student
+http://localhost:8080/student
+createDisabled
+postmapping()
+{
+    "firstName":"Nilay",
+    "lastName" : "ünal",
+    "email" : "fatih@gmail.com",
+    "password":"1234"
+}
+
+
+
 LOGIN
 http://localhost:8080/login
 
@@ -26,6 +111,8 @@ postMapping()
     "password":"1234",
     "role":"1"
 }
+
+
 
 
 

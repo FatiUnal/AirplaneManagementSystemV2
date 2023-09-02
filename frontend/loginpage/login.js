@@ -23,6 +23,8 @@ function login(event){
       .then((response) => response.json())
       .then((responseData) => {
         console.log(responseData);
+        document.cookie = document.cookie = `mail=${responseData.email}; expires=Thu, 18 Dec 2033 12:00:00 UTC`;
+        document.cookie = document.cookie = `role=${responseData.role}; expires=Thu, 18 Dec 2033 12:00:00 UTC`;
       })
       .catch((error) => {
         console.error("hata: ", error);
@@ -34,5 +36,7 @@ function login(event){
     selected.value = "1"
     
 }
+
+
 
 

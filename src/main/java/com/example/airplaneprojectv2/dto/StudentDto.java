@@ -1,12 +1,13 @@
 package com.example.airplaneprojectv2.dto;
 
-public class AdultDto {
+public class StudentDto {
+
     private String firstName;
     private String lastName;
     private String email;
     private String password;
 
-    public AdultDto(String firstName, String lastName, String email, String password) {
+    public StudentDto(String firstName, String lastName, String email, String password) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;

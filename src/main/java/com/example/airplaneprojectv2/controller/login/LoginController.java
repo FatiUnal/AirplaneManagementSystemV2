@@ -12,6 +12,7 @@ import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -26,18 +27,20 @@ public class LoginController {
     }
 
     @PostMapping
-    public <T>ResponseEntity<T> login(HttpServletResponse response,@RequestBody LoginDto loginDto){
-        System.out.println(loginDto.getEmail());
-        System.out.println(loginDto.getPassword());
-        System.out.println(loginDto.getRole());
+    public <T>ResponseEntity<T> login(@RequestBody LoginDto loginDto){
+        System.out.println("email: "+loginDto.getEmail());
+        System.out.println("pass: "+loginDto.getPassword());
+        System.out.println("role: "+loginDto.getRole());
         T user = loginService.login(loginDto);
-        Cookie cookie = new Cookie("email", "mail");
-        Cookie cookie2 = new Cookie("role", "rol");
-        response.addCookie(cookie);
-        response.addCookie(cookie2);
-
         System.out.println(user);
+        System.out.println("----------------------------");
         return new ResponseEntity<>(user, HttpStatus.OK);
+    }
+
+    @GetMapping
+    public ResponseEntity<List<Admin>> getList(){
+        List<Admin> newlist = loginService.getList();
+        return new ResponseEntity<>(newlist,HttpStatus.OK);
     }
 
 }
