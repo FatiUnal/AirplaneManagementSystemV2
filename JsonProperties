@@ -37,6 +37,8 @@ postmapping()
 
 
 
+
+
 ---------------------------------------------------------------
 
 BABY
@@ -111,6 +113,52 @@ postMapping()
     "password":"1234",
     "role":"1"
 }
+
+
+--------------------------------------------------------------
+
+EXPEDİTİON
+http://localhost:8080/expedition
+createExpedition
+postmapping()
+
+{
+    "departureAirport" : "Ankara",
+    "landingAirport" : "Istanbul",
+    "expeditionTime" : "3"
+}
+
+
+
+--------------------------------------------------------------
+
+AIRPLANE
+http://localhost:8080/airplane
+createAirplane
+postmapping()
+
+{
+    "brand" : "Boeing",
+    "model":"767",
+    "business" : 200,
+    "economy": 300
+}
+
+http://localhost:8080
+getAirplanes
+getmapping()
+
+
+http://localhost:8080/id
+getById
+getmapping()
+
+
+
+
+
+
+
 
 
 
