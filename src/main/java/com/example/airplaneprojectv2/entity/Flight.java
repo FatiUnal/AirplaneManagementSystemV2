@@ -17,7 +17,7 @@ public class Flight {
     @OneToOne
     @JoinColumn(name = "airplane_id")
     private Airplane airplane;
-    private String localDateTime;
+    private LocalDateTime localDateTime;
     private int emptyEconomySeat;
     private int emptyBusinessSeat;
     private boolean isActive;
@@ -26,7 +26,7 @@ public class Flight {
     private int defBusinessPrice;
     private int defEconomyPrice;
 
-    public Flight(int flightId, Expedition expedition, Airplane airplane, String localDateTime, int emptyEconomySeat, int emptyBusinessSeat, boolean isActive, int economyPrice, int businessPrice,int defBusinessPrice,int defEconomyPrice) {
+    public Flight(int flightId, Expedition expedition, Airplane airplane, LocalDateTime localDateTime, int emptyEconomySeat, int emptyBusinessSeat, boolean isActive, int economyPrice, int businessPrice,int defBusinessPrice,int defEconomyPrice) {
         this.flightId = flightId;
         this.expedition = expedition;
         this.airplane = airplane;
@@ -41,7 +41,7 @@ public class Flight {
     }
 
 
-    public Flight(Expedition expedition, Airplane airplane, String localDateTime, int emptyEconomySeat, int emptyBusinessSeat, boolean isActive, int economyPrice, int businessPrice, int defBusinessPrice, int defEconomyPrice) {
+    public Flight(Expedition expedition, Airplane airplane, LocalDateTime localDateTime, int emptyEconomySeat, int emptyBusinessSeat, boolean isActive, int economyPrice, int businessPrice, int defBusinessPrice, int defEconomyPrice) {
         this.expedition = expedition;
         this.airplane = airplane;
         this.localDateTime = localDateTime;
@@ -54,7 +54,7 @@ public class Flight {
         this.defEconomyPrice = defEconomyPrice;
     }
 
-    public Flight(Expedition expedition, Airplane airplane, String localDateTime, int emptyEconomySeat, int emptyBusinessSeat, boolean isActive, int economyPrice, int businessPrice) {
+    public Flight(Expedition expedition, Airplane airplane, LocalDateTime localDateTime, int emptyEconomySeat, int emptyBusinessSeat, boolean isActive, int economyPrice, int businessPrice) {
         this.expedition = expedition;
         this.airplane = airplane;
         this.localDateTime = localDateTime;
@@ -92,11 +92,11 @@ public class Flight {
         this.airplane = airplane;
     }
 
-    public String getLocalDateTime() {
+    public LocalDateTime getLocalDateTime() {
         return localDateTime;
     }
 
-    public void setLocalDateTime(String  localDateTime) {
+    public void setLocalDateTime(LocalDateTime  localDateTime) {
         this.localDateTime = localDateTime;
     }
 

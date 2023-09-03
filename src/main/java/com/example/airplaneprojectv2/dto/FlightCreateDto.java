@@ -10,18 +10,14 @@ public class FlightCreateDto {
     private int expedition_id;
     private int airplane_id;
     private String localDateTime;
-    private int emptyEconomySeat;
-    private int emptyBusinessSeat;
     private boolean isActive;
     private int economyPrice;
     private int businessPrice;
 
-    public FlightCreateDto( int expedition_id, int airplane_id, String localDateTime, int emptyEconomySeat, int emptyBusinessSeat, boolean isActive, int economyPrice, int businessPrice) {
+    public FlightCreateDto( int expedition_id, int airplane_id, String localDateTime, boolean isActive, int economyPrice, int businessPrice) {
         this.expedition_id = expedition_id;
         this.airplane_id = airplane_id;
         this.localDateTime = localDateTime;
-        this.emptyEconomySeat = emptyEconomySeat;
-        this.emptyBusinessSeat = emptyBusinessSeat;
         this.isActive = isActive;
         this.economyPrice = economyPrice;
         this.businessPrice = businessPrice;
@@ -50,23 +46,6 @@ public class FlightCreateDto {
     public void setLocalDateTime(String localDateTime) {
         this.localDateTime = localDateTime;
     }
-
-    public int getEmptyEconomySeat() {
-        return emptyEconomySeat;
-    }
-
-    public void setEmptyEconomySeat(int emptyEconomySeat) {
-        this.emptyEconomySeat = emptyEconomySeat;
-    }
-
-    public int getEmptyBusinessSeat() {
-        return emptyBusinessSeat;
-    }
-
-    public void setEmptyBusinessSeat(int emptyBusinessSeat) {
-        this.emptyBusinessSeat = emptyBusinessSeat;
-    }
-
     public boolean isActive() {
         return isActive;
     }

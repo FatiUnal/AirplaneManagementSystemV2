@@ -9,4 +9,6 @@ public interface IExpeditionService {
     Expedition createExpedition(ExpeditionDto expeditionDto);
 
     List<Expedition> getExpeditions();
+
+    Expedition getById(int expeditionId);
 }

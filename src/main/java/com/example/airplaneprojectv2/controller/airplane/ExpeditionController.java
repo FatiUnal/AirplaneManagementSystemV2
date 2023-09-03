@@ -27,4 +27,9 @@ public class ExpeditionController {
     public ResponseEntity<List<Expedition>> getExpedition(){
         return new ResponseEntity<>(iExpeditionService.getExpeditions(),HttpStatus.OK);
     }
+    @GetMapping("/{id}")
+    public ResponseEntity<Expedition> getById(@PathVariable int id){
+        return new ResponseEntity<>(iExpeditionService.getById(id),HttpStatus.CREATED);
+    }
 }
+

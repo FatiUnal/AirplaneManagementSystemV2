@@ -128,6 +128,16 @@ postmapping()
     "expeditionTime" : "3"
 }
 
+http://localhost:8080/expedition
+getAirplanes
+getmapping()
+
+
+http://localhost:8080/expedition/id
+getById
+getmapping("/{id}")
+
+
 
 
 --------------------------------------------------------------
@@ -153,6 +163,22 @@ http://localhost:8080/id
 getById
 getmapping()
 
+
+
+----------------------------------------------------
+
+
+FLIGHT
+createFlight : return FlightAdminResponseDto
+postmapping()
+{
+    "expedition_id":1,
+    "airplane_id":3,    // @onetoone
+    "localDateTime":"15/10/26/06/2002",
+    "active" : true,
+    "economyPrice":25,
+    "businessPrice":100
+}
 
 
 
