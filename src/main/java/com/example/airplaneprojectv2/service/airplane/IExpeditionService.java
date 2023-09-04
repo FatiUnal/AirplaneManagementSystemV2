@@ -1,6 +1,7 @@
 package com.example.airplaneprojectv2.service.airplane;
 
 import com.example.airplaneprojectv2.dto.ExpeditionDto;
+import com.example.airplaneprojectv2.dto.ExpeditionResponseDto;
 import com.example.airplaneprojectv2.entity.Expedition;
 
 import java.util.List;
@@ -8,7 +9,7 @@ import java.util.List;
 public interface IExpeditionService {
     Expedition createExpedition(ExpeditionDto expeditionDto);
 
-    List<Expedition> getExpeditions();
+    List<ExpeditionResponseDto> getExpeditions();
 
     Expedition getById(int expeditionId);
 }

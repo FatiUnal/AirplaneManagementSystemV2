@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/AdminHomePage/adminhomepage.css">
+    <link rel="stylesheet" href="adminhomepage.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
 
 </head>
 <body>
@@ -133,34 +134,27 @@
         
         <main class="content-wrap">
             <header class="content-head">
-                <h1>Airplane Create</h1>
-                
+                <h1>Expedition</h1>
+                    
+                <div class="action">
+                    <button onclick="getExpedition(event)">Load</button>
+                </div>
             </header>
             
             <div class="content">
-
-                <form>
-                    <div class="form-group">
-                      <label for="brand">Brand</label>
-                      <input type="text" class="form-control" id="brand" placeholder="Enter Brand">
-                    </div>
-                    <div class="form-group">
-                        <label for="model">Model</label>
-                        <input type="text" class="form-control" id="model" placeholder="Enter model">
-                    </div>
-                    <div class="form-group">
-                        <label for="business">Business</label>
-                        <input type="number" class="form-control" id="business" placeholder="Enter business seat">
-                    </div>
-                    <div class="form-group">
-                        <label for="economy">Economy</label>
-                        <input type="number" class="form-control" id="economy" placeholder="Enter economy seat">
-                    </div>
-                    <button type="submit" class="btn btn-primary" onclick="airplaneCreate(event)">Add</button>
-                  </form>
-
-
-
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">ExpeditionID </th>
+                        <th scope="col">   Deperture </th>
+                        <th scope="col">   Landing </th>
+                        <th scope="col">   ExpeditionTime </th>
+                    </tr>
+                    </thead>
+                    <tbody id="expeditionList">
+                        
+                    </tbody>
+                  </table>
             </div>
         </main>
 
@@ -173,8 +167,7 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="/AdminHomePage/adminhomepage.js"></script>
-        <script src="airplane_create.js"></script>
+        <script src="adminhomepage.js"></script>
     </div>
     
 </body>

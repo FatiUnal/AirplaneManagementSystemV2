@@ -1,6 +1,7 @@
 package com.example.airplaneprojectv2.controller.airplane;
 
 import com.example.airplaneprojectv2.dto.ExpeditionDto;
+import com.example.airplaneprojectv2.dto.ExpeditionResponseDto;
 import com.example.airplaneprojectv2.entity.Expedition;
 import com.example.airplaneprojectv2.service.airplane.IExpeditionService;
 import org.springframework.http.HttpStatus;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin("*")
 @RequestMapping("/expedition")
 public class ExpeditionController {
     private IExpeditionService iExpeditionService;
@@ -24,7 +26,7 @@ public class ExpeditionController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Expedition>> getExpedition(){
+    public ResponseEntity<List<ExpeditionResponseDto>> getExpedition(){
         return new ResponseEntity<>(iExpeditionService.getExpeditions(),HttpStatus.OK);
     }
     @GetMapping("/{id}")

@@ -22,12 +22,28 @@ function login(event){
     })
       .then((response) => response.json())
       .then((responseData) => {
+
         console.log(responseData);
-        document.cookie = document.cookie = `mail=${responseData.email}; expires=Thu, 18 Dec 2033 12:00:00 UTC`;
-        document.cookie = document.cookie = `role=${responseData.role}; expires=Thu, 18 Dec 2033 12:00:00 UTC`;
+        
+        localStorage.setItem("mail",`${responseData.email}`)
+        localStorage.setItem("role",`${responseData.role}`)
+
+
+        if(responseData.status == 500){
+          alert("User Not Found Pls Try Again")
+        }
+
+
+
+        // login işlemlerini hallet
+        if (responseData.role === '1'){
+          window.location.href = '/AdminHomePage/adminhomepage.html';
+        }else if(responseData.role === '2' ||responseData.role === '3' ||responseData.role === '4' ||responseData.role === '5' ||responseData.role === '6' ){
+          window.location.href = '/UserHomePage/userhomepage.html';
+        }
       })
       .catch((error) => {
-        console.error("hata: ", error);
+        console.log(error)
       });
   
     
@@ -36,6 +52,8 @@ function login(event){
     selected.value = "1"
     
 }
+
+
 
 
 

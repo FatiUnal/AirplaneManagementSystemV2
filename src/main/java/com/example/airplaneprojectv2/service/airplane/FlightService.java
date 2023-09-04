@@ -9,6 +9,9 @@ import com.example.airplaneprojectv2.entity.Flight;
 import com.example.airplaneprojectv2.repository.FlightRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 public class FlightService implements IFlightService{
     private IExpeditionService iExpeditionService;
@@ -32,5 +35,11 @@ public class FlightService implements IFlightService{
         FlightAdminResponseDto flightAdminResponseDto = flightBuilder.getAdminNewFlight(saveFlight);
 
         return flightAdminResponseDto;
+    }
+
+    @Override
+    public List<FlightAdminResponseDto> getFlights() {
+        List<FlightAdminResponseDto> liste = flightRepository.findAll().stream().map(flight -> flightBuilder.getAdminNewFlight(flight)).collect(Collectors.toList());
+        return liste;
     }
 }

@@ -180,6 +180,24 @@ postmapping()
     "businessPrice":100
 }
 
+return :
+{
+        "flightId": 6,
+        "expeditionId": 1,
+        "departureAirport": "İstanbul",
+        "landingAirport": "Ankara",
+        "expeditionTime": "3",
+        "airplaneId": 3,
+        "brand": "Airbus",
+        "model": "A350",
+        "business": 150,
+        "economy": 300,
+        "localDateTime": "2002-06-26T10:15:00",
+        "economyPrice": 25,
+        "businessPrice": 100,
+        "active": true
+    }
+
 
 
 

@@ -133,38 +133,32 @@
         
         <main class="content-wrap">
             <header class="content-head">
-                <h1>Airplane Create</h1>
-                
+                <h1>Create Expedition</h1>
+               
             </header>
             
             <div class="content">
-
                 <form>
                     <div class="form-group">
-                      <label for="brand">Brand</label>
-                      <input type="text" class="form-control" id="brand" placeholder="Enter Brand">
+                      <label for="departure">Departure Airport</label>
+                      <input type="text" class="form-control" id="departure" placeholder="Enter Departure Airport">
                     </div>
                     <div class="form-group">
-                        <label for="model">Model</label>
-                        <input type="text" class="form-control" id="model" placeholder="Enter model">
+                        <label for="landing">Landing Airport</label>
+                        <input type="text" class="form-control" id="landing" placeholder="Enter Landing Airport">
                     </div>
                     <div class="form-group">
-                        <label for="business">Business</label>
-                        <input type="number" class="form-control" id="business" placeholder="Enter business seat">
+                        <label for="time">Expedition Time</label>
+                        <input type="text" class="form-control" id="time" placeholder="Enter Time">
                     </div>
-                    <div class="form-group">
-                        <label for="economy">Economy</label>
-                        <input type="number" class="form-control" id="economy" placeholder="Enter economy seat">
-                    </div>
-                    <button type="submit" class="btn btn-primary" onclick="airplaneCreate(event)">Add</button>
+                    <button type="submit" class="btn btn-primary" onclick="expeditionCreate(event)">Add</button>
                   </form>
-
-
-
+                  
             </div>
         </main>
 
-
+        <script src="/AdminHomePage/adminhomepage.js"></script>
+        <script src="expeditioncreate.js"></script>
         <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -173,8 +167,6 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="/AdminHomePage/adminhomepage.js"></script>
-        <script src="airplane_create.js"></script>
     </div>
     
 </body>

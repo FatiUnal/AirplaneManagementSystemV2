@@ -33,7 +33,7 @@ public class LoginService {
         T user = null;
         switch (loginDto.getRole()){
             case "1":
-                user = (T)iAdminService.getAdminByEmail(loginDto.getEmail());
+                user = (T)iAdminService.getByEmailAndLogin(loginDto);
                 break;
             case "2":
                 user = (T)iAdultService.getAdminByEmail(loginDto.getEmail());
